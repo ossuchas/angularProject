@@ -1,0 +1,13 @@
+version: '3.5'
+
+services: 
+  web:
+    container_name: angularcontainer
+    build:
+        context: .
+        dockerfile: ./Dockerfile
+    volumes:
+        - '/home/ubuntu/src/app'
+        - '/home/ubuntu/src/app/node_modules'
+    ports: 
+      - "4200:4200"
